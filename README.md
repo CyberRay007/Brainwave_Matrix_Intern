@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 # Usage
 Scan a single URL
-python phishing_scanner.py --url "http://Facebook.com/login"
+python phishing_scanner.py --url "http://example.com/login"
 
 Scan multiple URLs from CSV
 python phishing_scanner.py --input_csv sample_urls.csv --output_csv report.csv
