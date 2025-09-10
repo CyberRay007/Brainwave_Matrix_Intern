@@ -1,66 +1,57 @@
-# Brainwave_Matrix_Intern
-Phishing Link Scanner Project for Cybersecurity Internship
-# Phishing Link Scanner
+#  Phishing Link Scanner – Brainwave Matrix Intern Project
 
-A Python-based cybersecurity tool to detect and flag potentially malicious or phishing URLs.  
-This project was developed as part of my internship at Brainwave Matrix Intern.
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Active-success.svg)
+
+#  Overview
+This project is a Phishing Link Scanner built as part of my Brainwave Matrix Internship.  
+It analyzes URLs using heuristics (rules of thumb) to detect suspicious patterns such as misleading domains, excessive dots, and keywords like "login" or "verify".  
+
+The tool can:
+- Scan **single URLs**  
+- Process **batch URLs from CSV**  
+- Export results into a **report.csv**  
+- Optionally perform **live checks** (follow redirects, grab page title)  
 
 ---
 
-#  Features
-- Extracts and analyzes key features of URLs
-- Detects suspicious patterns in domains and paths
-- Flags risky URLs (e.g., containing -secure, login, verify)
-- Supports batch scanning from CSV files
-- Generates detailed reports (report.csv)
-- Simple, beginner-friendly codebase for cybersecurity learners
+##  Features
+-  Heuristic-based phishing detection  
+-  Batch scanning with CSV input  
+-  Auto-generated CSV reports  
+-  Lightweight and beginner-friendly  
+-  Extensible for future improvements  
 
 ---
 
-# Project Structure
-Brainwave_Matrix_Intern/
-│── phishing_scanner.py # Main script
-│── requirements.txt # Dependencies
-│── sample_urls.csv # Example input file
-│── report.csv # Example output file (generated after scan)
-│── README.md # Project documentation
+# Setup
 
-# Installation & Setup
+Clone this repository and install dependencies:
 
-# 1. Clone the repository
-
-git clone (https://github.com/CyberRay007/Brainwave_Matrix_Intern.git)
+```bash
+git clone https://github.com/CyberRay007/Brainwave_Matrix_Intern.git
 cd Brainwave_Matrix_Intern
-----
-
-2. Create a virtual environment
-python -m venv .venv
-
-
-Activate it:
-
-Windows (PowerShell):
-
-.venv\Scripts\Activate
-
-
-Linux/Mac:
-
-source .venv/bin/activate
-
-3. Install dependencies
 pip install -r requirements.txt
+Requirements (requirements.txt):
 
-# Usage
-Scan a single URL
+text
+Copy code
+requests
+beautifulsoup4
+pandas
+▶️ Usage
+🔹 Scan a single URL
+bash
+Copy code
 python phishing_scanner.py --url "http://example.com/login"
-
-Scan multiple URLs from CSV
+🔹 Scan a batch of URLs (CSV input)
+bash
+Copy code
 python phishing_scanner.py --input_csv sample_urls.csv --output_csv report.csv
-
-
-# Example sample_urls.csv:
-
+<details> <summary>📂 Sample Input CSV (click to expand)</summary>
+csv
+Copy code
 url
 https://www.microsoft.com
 http://198.51.100.4/login
@@ -72,59 +63,28 @@ https://accounts.google.com
 http://sub1.sub2.sub3.sub4.domain.top/reset
 https://mybank-secure-login.xyz/confirm
 http://example.com/93485734987534987534
+</details>
+📸 Screenshots
+Example scanner run in terminal:
 
-# Example Report Output
+Example generated CSV report:
 
-Generated report.csv:
+📂 Project Structure
+bash
+Copy code
+Brainwave_Matrix_Intern/
+│── phishing_scanner.py   # Main scanner code
+│── requirements.txt      # Dependencies
+│── sample_urls.csv       # Example input
+│── README.md             # Documentation
+│── LICENSE               # MIT License
+│── .gitignore            # Ignored files (e.g., report.csv, .venv/)
+│── screenshots/          # Demo images
+🧪 GitHub CI/CD
+This repo includes a GitHub Action workflow that automatically installs dependencies and runs a test scan whenever changes are pushed.
 
-url,domain,path,has_https,suspicious_chars,url_length,label
-https://www.microsoft.com,www.microsoft.com,,True,False,25,Safe
-http://198.51.100.4/login,198.51.100.4,/login,False,False,25,Suspicious
-https://secure-paypa1.com/verify,secure-paypa1.com,/verify,True,True,32,Suspicious
-http://example.com/update/account?user=you,example.com,/update/account,False,True,42,Phishing (High Risk)
-https://bit.ly/3AbCdE,bit.ly,/3AbCdE,True,False,21,Safe
-https://xn--pple-43d.com/login,xn--pple-43d.com,/login,True,True,30,Suspicious
-https://accounts.google.com,accounts.google.com,,True,False,27,Safe
-http://sub1.sub2.sub3.sub4.domain.top/reset,sub1.sub2.sub3.sub4.domain.top,/reset,False,False,43,Suspicious
-https://mybank-secure-login.xyz/confirm,mybank-secure-login.xyz,/confirm,True,True,39,Suspicious
-http://example.com/93485734987534987534,example.com,/93485734987534987534,False,False,39,Suspicious
+📝 License
+This project is licensed under the MIT License – see the LICENSE file for details.
 
-
-# Requirements
-
-Python 3.8+
-
-Libraries:
-
-requests
-
-beautifulsoup4
-
-pandas
-
-pylance
-
-Install them via:
-
-pip install -r requirements.txt
-
-Or you install them individually
-
-# Internship Context
-
-This project was built as part of my internship at Brainwave Matrix Intern, where I worked as a Cybersecurity Analyst & Ethical Hacker Intern.
-The goal was to develop a beginner-friendly phishing link scanner to demonstrate practical applications of cybersecurity in detecting online threats.
-
-📜 License
-
-MIT License – feel free to use and modify this project, but please give credit.
-
-🔖 Author
-
-👨‍💻 Name (Raymond Favour Joshua)
-📧 Email raymondjoshua004@gmail.com
-
-🌐 GitHub: CyberRay007
-
-
----
+✨ Author
+CyberRay007 – Cybersecurity Analyst & Ethical Hacker Intern @ Brainwave Matrix
