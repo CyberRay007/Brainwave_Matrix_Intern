@@ -1,0 +1,17 @@
+Python 3.8+
+
+Libraries:
+
+requests
+
+beautifulsoup4
+
+pandas
+
+pylance
+
+Install them via:
+
+pip install -r requirements.txt
+
+Or you install them individually
