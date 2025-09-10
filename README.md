@@ -29,7 +29,7 @@ Brainwave_Matrix_Intern/
 
 # 1. Clone the repository
 
-git clone https://github.com/YOUR_USERNAME/Brainwave_Matrix_Intern.git
+git clone (https://github.com/CyberRay007/Brainwave_Matrix_Intern.git)
 cd Brainwave_Matrix_Intern
 ----
 
