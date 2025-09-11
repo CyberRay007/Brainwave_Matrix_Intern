@@ -48,7 +48,7 @@ python phishing_scanner.py --url "http://example.com/login"
 🔹 Scan a batch of URLs (CSV input)
 bash
 Copy code
-python phishing_scanner.py --input_csv sample_urls.csv --output_csv report.csv
+python phishing_scanner.py --input_csv samples_urls.csv --output_csv report.csv
 <details> <summary>📂 Sample Input CSV (click to expand)</summary>
 csv
 Copy code
